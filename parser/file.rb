@@ -59,7 +59,7 @@ module Classrubrowser
           when :module then parse_module(node, parents)
           when :class then parse_class(node, parents)
           when :const then parse_const(node, parents)
-          when :def then parse_method(node, parents)
+          when :def,:define_method then parse_method(node, parents)
           when :lvasgn then parse_var(node, parents)
           else parse_array(node.children, parents)
         end
